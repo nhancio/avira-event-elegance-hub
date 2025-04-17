@@ -3,6 +3,7 @@ import React from 'react';
 import { Calendar, Cake, Home, Users, Building, Gift } from 'lucide-react';
 import AnimatedElement from './AnimatedElement';
 import { Card, CardContent } from './ui/card';
+import { AspectRatio } from './ui/aspect-ratio';
 
 const OfferingsSection = () => {
   const offerings = [
@@ -13,6 +14,7 @@ const OfferingsSection = () => {
       delay: 100,
       gradient: 'from-rose-100 to-rose-200',
       rotation: 'hover:-rotate-1',
+      image: 'https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
     },
     {
       title: 'Birthdays',
@@ -21,6 +23,7 @@ const OfferingsSection = () => {
       delay: 200,
       gradient: 'from-amber-50 to-amber-200',
       rotation: 'hover:rotate-1',
+      image: 'https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
     },
     {
       title: 'Gruha Pravesham',
@@ -29,6 +32,7 @@ const OfferingsSection = () => {
       delay: 300,
       gradient: 'from-green-50 to-green-200',
       rotation: 'hover:-rotate-1',
+      image: 'https://images.unsplash.com/photo-1503174971373-b1f69850bded?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2013&q=80',
     },
     {
       title: 'Anniversaries',
@@ -37,6 +41,7 @@ const OfferingsSection = () => {
       delay: 400,
       gradient: 'from-purple-50 to-purple-200',
       rotation: 'hover:rotate-1',
+      image: 'https://images.unsplash.com/photo-1508615070457-7baeba4003ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
     },
     {
       title: 'Corporate Events',
@@ -45,6 +50,7 @@ const OfferingsSection = () => {
       delay: 500,
       gradient: 'from-blue-50 to-blue-200',
       rotation: 'hover:-rotate-1',
+      image: 'https://images.unsplash.com/photo-1559223607-a43c990c692c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
     },
     {
       title: 'Custom Celebrations',
@@ -53,6 +59,7 @@ const OfferingsSection = () => {
       delay: 600,
       gradient: 'from-secondary/20 to-secondary/40',
       rotation: 'hover:rotate-1',
+      image: 'https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
     },
   ];
 
@@ -75,21 +82,29 @@ const OfferingsSection = () => {
               animation="slide-up" 
               delay={offering.delay}
             >
-              <Card className={`overflow-hidden border-none shadow-lg transition-all duration-300 ${offering.rotation} bg-gradient-to-br ${offering.gradient} h-full`}>
-                <div className="absolute top-0 right-0 w-16 h-16 bg-white/20 rounded-bl-3xl" />
+              <Card className={`overflow-hidden border-none shadow-lg transition-all duration-300 ${offering.rotation} h-full`}>
+                <AspectRatio ratio={16 / 9}>
+                  <img 
+                    src={offering.image} 
+                    alt={offering.title} 
+                    className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
+                  />
+                </AspectRatio>
                 
-                <CardContent className="p-6 relative">
-                  <div className="mb-5 inline-flex items-center justify-center w-14 h-14 rounded-full bg-white text-primary shadow-md transition-all group-hover:bg-primary group-hover:text-primary-foreground">
+                <CardContent className={`p-6 relative bg-gradient-to-br ${offering.gradient}`}>
+                  <div className="absolute -top-8 left-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-white text-primary shadow-md border-4 border-background transition-all group-hover:bg-primary group-hover:text-primary-foreground">
                     <offering.icon size={28} />
                   </div>
                   
-                  <h3 className="text-xl font-semibold font-playfair text-foreground mb-3 transition-all group-hover:text-primary">
-                    {offering.title}
-                  </h3>
-                  
-                  <p className="text-muted-foreground font-montserrat">
-                    {offering.description}
-                  </p>
+                  <div className="mt-8">
+                    <h3 className="text-xl font-semibold font-playfair text-foreground mb-3 transition-all group-hover:text-primary">
+                      {offering.title}
+                    </h3>
+                    
+                    <p className="text-muted-foreground font-montserrat">
+                      {offering.description}
+                    </p>
+                  </div>
                   
                   <div className="absolute bottom-3 right-3 w-8 h-8 rounded-full bg-white/30" />
                 </CardContent>
