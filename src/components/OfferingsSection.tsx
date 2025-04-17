@@ -2,6 +2,7 @@
 import React from 'react';
 import { Calendar, Cake, Home, Users, Building, Gift } from 'lucide-react';
 import AnimatedElement from './AnimatedElement';
+import { Card, CardContent } from './ui/card';
 
 const OfferingsSection = () => {
   const offerings = [
@@ -10,36 +11,48 @@ const OfferingsSection = () => {
       description: 'Elegant ceremonies and receptions tailored to your vision, creating magical moments that last a lifetime.',
       icon: Calendar,
       delay: 100,
+      gradient: 'from-rose-100 to-rose-200',
+      rotation: 'hover:-rotate-1',
     },
     {
       title: 'Birthdays',
       description: 'Spectacular celebrations for all ages, from intimate gatherings to lavish themed parties.',
       icon: Cake,
       delay: 200,
+      gradient: 'from-amber-50 to-amber-200',
+      rotation: 'hover:rotate-1',
     },
     {
       title: 'Gruha Pravesham',
       description: 'Traditional housewarming ceremonies that honor cultural values while welcoming prosperity to your new home.',
       icon: Home,
       delay: 300,
+      gradient: 'from-green-50 to-green-200',
+      rotation: 'hover:-rotate-1',
     },
     {
       title: 'Anniversaries',
       description: 'Romantic celebrations marking your special milestones with thoughtful details and meaningful touches.',
       icon: Users,
       delay: 400,
+      gradient: 'from-purple-50 to-purple-200',
+      rotation: 'hover:rotate-1',
     },
     {
       title: 'Corporate Events',
       description: 'Professional gatherings from conferences to team-building events, designed to impress and inspire.',
       icon: Building,
       delay: 500,
+      gradient: 'from-blue-50 to-blue-200',
+      rotation: 'hover:-rotate-1',
     },
     {
       title: 'Custom Celebrations',
       description: 'Bespoke events crafted for any occasion, bringing your unique vision to life with creativity and elegance.',
       icon: Gift,
       delay: 600,
+      gradient: 'from-secondary/20 to-secondary/40',
+      rotation: 'hover:rotate-1',
     },
   ];
 
@@ -61,17 +74,26 @@ const OfferingsSection = () => {
               key={index} 
               animation="slide-up" 
               delay={offering.delay}
-              className="bg-background rounded-lg shadow-sm border border-border p-6 transition-all hover:shadow-md hover:border-secondary group"
             >
-              <div className="mb-5 inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary transition-all group-hover:bg-primary group-hover:text-primary-foreground">
-                <offering.icon size={24} />
-              </div>
-              <h3 className="text-xl font-semibold font-playfair text-foreground mb-3 transition-all group-hover:text-primary">
-                {offering.title}
-              </h3>
-              <p className="text-muted-foreground font-montserrat">
-                {offering.description}
-              </p>
+              <Card className={`overflow-hidden border-none shadow-lg transition-all duration-300 ${offering.rotation} bg-gradient-to-br ${offering.gradient} h-full`}>
+                <div className="absolute top-0 right-0 w-16 h-16 bg-white/20 rounded-bl-3xl" />
+                
+                <CardContent className="p-6 relative">
+                  <div className="mb-5 inline-flex items-center justify-center w-14 h-14 rounded-full bg-white text-primary shadow-md transition-all group-hover:bg-primary group-hover:text-primary-foreground">
+                    <offering.icon size={28} />
+                  </div>
+                  
+                  <h3 className="text-xl font-semibold font-playfair text-foreground mb-3 transition-all group-hover:text-primary">
+                    {offering.title}
+                  </h3>
+                  
+                  <p className="text-muted-foreground font-montserrat">
+                    {offering.description}
+                  </p>
+                  
+                  <div className="absolute bottom-3 right-3 w-8 h-8 rounded-full bg-white/30" />
+                </CardContent>
+              </Card>
             </AnimatedElement>
           ))}
         </div>
