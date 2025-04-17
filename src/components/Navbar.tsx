@@ -27,12 +27,25 @@ const Navbar = () => {
     { name: 'Contact', to: 'contact' },
   ];
 
+  // Standardized scroll settings for consistent experience
+  const scrollSettings = {
+    spy: true,
+    smooth: true,
+    offset: -70,
+    duration: 800, // Increased for smoother animation
+    delay: 0,      // Remove any delay that might cause the initial slowness
+  };
+
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-background/95 backdrop-blur-sm shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <Link to="home" smooth={true} duration={500} className="cursor-pointer">
+            <Link 
+              to="home" 
+              {...scrollSettings}
+              className="cursor-pointer"
+            >
               <h1 className="text-2xl md:text-3xl font-bold font-playfair text-primary">
                 Avira<span className="text-secondary">.</span>
               </h1>
@@ -45,10 +58,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.to}
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
+                {...scrollSettings}
                 className="text-foreground hover:text-primary font-montserrat text-sm uppercase tracking-wide cursor-pointer transition-colors"
                 activeClass="text-primary font-medium"
               >
@@ -57,10 +67,7 @@ const Navbar = () => {
             ))}
             <Link
               to="contact"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
+              {...scrollSettings}
               className="bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2 rounded-md text-sm font-montserrat uppercase tracking-wide cursor-pointer transition-colors"
             >
               Book Now
@@ -88,10 +95,7 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   to={item.to}
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
+                  {...scrollSettings}
                   className="text-foreground hover:text-primary font-montserrat text-sm uppercase tracking-wide cursor-pointer transition-colors py-2"
                   activeClass="text-primary font-medium"
                   onClick={() => setIsOpen(false)}
@@ -101,10 +105,7 @@ const Navbar = () => {
               ))}
               <Link
                 to="contact"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
+                {...scrollSettings}
                 className="bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2 rounded-md text-sm font-montserrat uppercase tracking-wide cursor-pointer transition-colors w-full text-center"
                 onClick={() => setIsOpen(false)}
               >
