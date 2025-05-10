@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Check } from 'lucide-react';
 import AnimatedElement from './AnimatedElement';
@@ -20,7 +19,7 @@ const AboutSection = () => {
           <AnimatedElement animation="fade-in" className="relative">
             <div className="relative h-[500px] rounded-lg overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80"
+                src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1469&auto=format&fit=crop"
                 alt="Avira team planning an event"
                 className="w-full h-full object-cover"
               />

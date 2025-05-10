@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Calendar, Cake, Home, Users, Building, Gift } from 'lucide-react';
 import AnimatedElement from './AnimatedElement';
@@ -14,7 +13,7 @@ const OfferingsSection = () => {
       delay: 100,
       gradient: 'from-rose-100 to-rose-200',
       rotation: 'hover:-rotate-1',
-      image: 'https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      image: 'https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=1470&auto=format&fit=crop',
     },
     {
       title: 'Birthdays',
@@ -23,7 +22,7 @@ const OfferingsSection = () => {
       delay: 200,
       gradient: 'from-amber-50 to-amber-200',
       rotation: 'hover:rotate-1',
-      image: 'https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      image: 'https://images.unsplash.com/photo-1558636508-e0db3814bd1d?q=80&w=1470&auto=format&fit=crop',
     },
     {
       title: 'Gruha Pravesham',
@@ -32,7 +31,7 @@ const OfferingsSection = () => {
       delay: 300,
       gradient: 'from-green-50 to-green-200',
       rotation: 'hover:-rotate-1',
-      image: 'https://images.unsplash.com/photo-1503174971373-b1f69850bded?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2013&q=80',
+      image: 'https://images.unsplash.com/photo-1560185127-6ed189bf02f4?q=80&w=1470&auto=format&fit=crop',
     },
     {
       title: 'Anniversaries',
@@ -41,7 +40,7 @@ const OfferingsSection = () => {
       delay: 400,
       gradient: 'from-purple-50 to-purple-200',
       rotation: 'hover:rotate-1',
-      image: 'https://images.unsplash.com/photo-1508615070457-7baeba4003ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      image: '/images/anniversary.jpg',
     },
     {
       title: 'Corporate Events',
@@ -50,7 +49,7 @@ const OfferingsSection = () => {
       delay: 500,
       gradient: 'from-blue-50 to-blue-200',
       rotation: 'hover:-rotate-1',
-      image: 'https://images.unsplash.com/photo-1559223607-a43c990c692c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      image: '/images/corporate.jpg',
     },
     {
       title: 'Custom Celebrations',
@@ -59,7 +58,7 @@ const OfferingsSection = () => {
       delay: 600,
       gradient: 'from-secondary/20 to-secondary/40',
       rotation: 'hover:rotate-1',
-      image: 'https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      image: '/images/custom.jpg',
     },
   ];
 

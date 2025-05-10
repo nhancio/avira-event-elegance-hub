@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { Menu, X } from 'lucide-react';
@@ -46,9 +45,11 @@ const Navbar = () => {
               {...scrollSettings}
               className="cursor-pointer"
             >
-              <h1 className="text-2xl md:text-3xl font-bold font-playfair text-primary">
-                Avira<span className="text-secondary">.</span>
-              </h1>
+              <img 
+                src="/images/avirapng.png" 
+                alt="Avira Logo" 
+                className="h-24 w-auto" // Changed from h-16 to h-24
+              />
             </Link>
           </div>
 
