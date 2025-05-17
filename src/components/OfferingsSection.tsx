@@ -90,7 +90,7 @@ const OfferingsSection = () => {
                   />
                 </AspectRatio>
                 
-                <CardContent className={`p-6 relative bg-gradient-to-br ${offering.gradient}`}>
+                <CardContent className={`p-6 relative bg-gradient-to-br ${offering.gradient} h-full`}>
                   <div className="absolute -top-8 left-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-white text-primary shadow-md border-4 border-background transition-all group-hover:bg-primary group-hover:text-primary-foreground">
                     <offering.icon size={28} />
                   </div>

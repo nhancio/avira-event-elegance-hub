@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-scroll';
-import { Instagram, Facebook, MessageCircle, ChevronRight } from 'lucide-react';
+import { Instagram, MessageCircle, ChevronRight } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -46,13 +46,6 @@ const Footer = () => {
                 rel="noopener noreferrer"
               >
                 <Instagram size={18} />
-              </a>
-              <a 
-                href="#" 
-                className="w-9 h-9 rounded-full flex items-center justify-center bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook size={18} />
               </a>
               <a 
                 href="https://wa.me/916304408747?text=Hey%2C%20I%20want%20to%20enquire%20about%20Avira%20events" 
@@ -116,8 +109,8 @@ const Footer = () => {
             <address className="not-italic space-y-3 text-primary-foreground/80 font-montserrat text-sm">
               <p className="flex items-start">
                 <span className="mr-2">📍</span>
-                Tulip-D, Star Homes, IDPL, Balanagar,<br />
-                Hyderabad-500054
+                House no.8-320, Road no. 5, New Vivekananda Colony,<br />
+                Quthbullapur, Chinthal, Hyderabad-500054
               </p>
               <p className="flex items-center">
                 <span className="mr-2">📱</span>

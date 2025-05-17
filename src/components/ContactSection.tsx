@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Instagram, Facebook, MessageSquare } from 'lucide-react';
+import { Phone, Mail, MapPin, Instagram, MessageSquare } from 'lucide-react';
 import AnimatedElement from './AnimatedElement';
 
 const ContactSection = () => {
@@ -46,8 +46,10 @@ const ContactSection = () => {
               <div>
                 <h4 className="text-foreground font-medium mb-1 font-montserrat">Address</h4>
                 <p className="text-muted-foreground font-montserrat">
-                  Tulip-D, Star Homes, IDPL,<br />
-                  Balanagar, Hyderabad-500054
+                  House no.8-320, Road no. 5,<br />
+                  New Vivekananda Colony,<br />
+                  Quthbullapur, Chinthal,<br />
+                  Hyderabad-500054
                 </p>
               </div>
             </div>
@@ -65,9 +67,6 @@ const ContactSection = () => {
                     rel="noopener noreferrer"
                   >
                     <Instagram size={20} />
-                  </a>
-                  <a href="#" className="text-foreground hover:text-primary transition-colors">
-                    <Facebook size={20} />
                   </a>
                 </div>
               </div>
